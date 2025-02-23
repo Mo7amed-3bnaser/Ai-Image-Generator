@@ -180,6 +180,23 @@ a:hover {
     z-index: 5;
 }
 
+@media (min-width: 1200px) {
+    .images div {
+        max-height: 700px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        min-height: 110vh;
+        gap: 35px;
+    }
+
+    .images div {
+        max-height: 600px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         gap: 30px;
@@ -189,6 +206,7 @@ a:hover {
 
     h1 {
         font-size: 36px;
+        margin: 10px 0 20px 0;
     }
     
     .prompt {
@@ -207,41 +225,82 @@ a:hover {
     }
 
     .images div {
-        max-height: 550px;
+        max-height: 500px;
     }
     
-    .logo {
-        font-size: 22px;
-        position: relative;
-        top: 0;
-        left: 0;
-        margin-bottom: -10px;
+    .logo a {
+        position: static;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 10px;
+    }
+
+    .logo a {
+        font-size: 18px;
+        display: block;
+        text-align: center;
+        margin: 0 auto 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin: 0 0 15px 0;
+    }
+
+    .prompt {
+        display: flex;
+        gap: 8px;
+    }
+
+    button {
+        padding: 10px;
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    .images div {
+        max-height: 450px;
+    }
+
+    input {
+        width: 72%;
+    }
+
+    button {
+        width: 26%;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        gap: 25px;
-        padding: 15px 10px;
-        min-height: 90vh;
+        padding-top: 5px;
+    }
+
+    .logo a {
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     h1 {
         font-size: 28px;
+        margin: 0 0 10px 0;
     }
 
     .prompt {
-        width: 98%;
-        padding: 5px;
+        padding: 6px;
     }
 
     input {
-        width: 70%;
-        font-size: 14px;
+        width: 68%;
     }
 
     button {
-        width: 28%;
+        width: 30%;
         font-size: 14px;
         padding: 8px;
     }
@@ -252,7 +311,7 @@ a:hover {
     }
 
     .images div {
-        max-height: 400px;
+        max-height: 350px;
         border-radius: 15px;
     }
 
@@ -269,8 +328,24 @@ a:hover {
         bottom: 25px;
         width: 95%;
     }
+}
 
-    .logo {
-        font-size: 18px;
+@media (max-width: 360px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .images div {
+        max-height: 300px;
+    }
+
+    input {
+        width: 68%;
+        font-size: 13px;
+    }
+
+    button {
+        width: 30%;
+        font-size: 13px;
     }
 }
