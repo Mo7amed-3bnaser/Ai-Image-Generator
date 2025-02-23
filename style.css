@@ -80,7 +80,7 @@ button:active {
     justify-content: center;
     align-items: center;
     width: min(95%, 900px);
-    margin-bottom: 120px;
+    margin-bottom: 40px;
     margin-top: 20px;
 }
 
@@ -113,7 +113,7 @@ button:active {
 
 .copyright {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -136,8 +136,10 @@ button:active {
     border-radius: 20px;
     backdrop-filter: blur(5px);
 }
-
-.logo {
+.logo{
+    cursor: pointer;
+}
+.logo a{
     position: absolute;
     top: 20px;
     left: 30px;
@@ -153,9 +155,10 @@ button:active {
     border-radius: 12px;
     transition: all 0.3s ease;
     text-shadow: 0 2px 10px rgba(138, 100, 235, 0.2);
+    text-decoration: none;
 }
 
-.logo:hover {
+a:hover {
     border-color: rgba(138, 100, 235, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(138, 100, 235, 0.2);
@@ -163,7 +166,7 @@ button:active {
 
 .divider {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -177,51 +180,97 @@ button:active {
     z-index: 5;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
-        gap: 25px;
+        gap: 30px;
+        padding: 20px 15px;
+        min-height: 100vh;
     }
 
     h1 {
-        margin-bottom: -15px;
-    }
-
-    .images {
-        margin-top: -15px;
-    }
-
-    h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
     
     .prompt {
-        padding: 5px;
+        width: 95%;
+        padding: 6px;
     }
     
     input, button {
         font-size: 16px;
         padding: 10px;
     }
-    
-    .copyright {
-        font-size: 14px;
-        bottom: 15px;
-    }
-    
-    .logo {
-        position: relative;
-        top: 0;
-        left: 0;
-        margin-bottom: -20px;
-        font-size: 20px;
-    }
-    
-    .divider {
-        bottom: 45px;
-        width: 90%;
+
+    .images {
+        width: 95%;
+        margin-bottom: 35px;
     }
 
     .images div {
-        max-height: 500px;
+        max-height: 550px;
+    }
+    
+    .logo {
+        font-size: 22px;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        gap: 25px;
+        padding: 15px 10px;
+        min-height: 90vh;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .prompt {
+        width: 98%;
+        padding: 5px;
+    }
+
+    input {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    button {
+        width: 28%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .images {
+        width: 98%;
+        margin-bottom: 30px;
+    }
+
+    .images div {
+        max-height: 400px;
+        border-radius: 15px;
+    }
+
+    .copyright {
+        font-size: 12px;
+        bottom: 5px;
+    }
+
+    .copyright p {
+        padding: 6px 15px;
+    }
+
+    .divider {
+        bottom: 25px;
+        width: 95%;
+    }
+
+    .logo {
+        font-size: 18px;
     }
 }
